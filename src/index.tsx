@@ -12,11 +12,11 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "/",
+        path: "/rest-countries/",
         element: <Home />,
       },
       {
-        path: "/:countryName",
+        path: "/rest-countries/:countryName",
         element: <Country />,
       },
     ],
