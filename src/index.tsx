@@ -7,7 +7,7 @@ import reportWebVitals from "./reportWebVitals";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/rest-countries",
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
