@@ -78,7 +78,7 @@ function CountryCard(data: any) {
         <img
           className="card-countries-item-header-image"
           src={country.flags.png}
-          alt=""
+          alt={country.name.common}
         />
       </Link>
       <div className="card-countries-item-description">
@@ -348,7 +348,7 @@ function Country() {
             <img
               className="details-page-card-display-image"
               src={country.flags.png}
-              alt=""
+              alt={country.name.common}
             />
           </div>
           <div className="details-page-card-description">
