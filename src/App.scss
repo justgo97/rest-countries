@@ -1,0 +1,638 @@
+/*
+- Dark Blue (Dark Mode Elements): hsl(209, 23%, 22%)
+- Very Dark Blue (Dark Mode Background): hsl(207, 26%, 17%)
+- Very Dark Blue (Light Mode Text): hsl(200, 15%, 8%)
+- Dark Gray (Light Mode Input): hsl(0, 0%, 52%)
+- Very Light Gray (Light Mode Background): hsl(0, 0%, 98%)
+- White (Dark Mode Text & Light Mode Elements): hsl(0, 0%, 100%)
+*/
+
+$darkBlue: hsl(209, 23%, 22%);
+$veryDarkBlue: hsl(207, 26%, 17%);
+$veryDarkBlueText: hsl(200, 15%, 8%);
+$darkGrey: hsl(0, 0%, 52%);
+$veryLightGray: hsl(0, 0%, 98%);
+$colorWhite: hsl(0, 0%, 100%);
+
+/*
+
+- Homepage Items: 14px
+- Detail Page: 16px 
+
+*/
+
+$textHome: 14px;
+$textDetail: 16px;
+
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.nav {
+  display: flex;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.071);
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  &-container {
+    display: flex;
+    flex: 1;
+  }
+
+  &-end {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .nav-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding-top: 2px;
+    }
+  }
+}
+
+.card {
+  display: flex;
+  padding-top: 2rem;
+  min-height: 50vh;
+  flex: 1;
+
+  &-margin-left {
+    width: 6%;
+    min-width: 0px;
+  }
+
+  &-margin-right {
+    width: 6%;
+    min-width: 0px;
+  }
+
+  &-container {
+    flex: 1;
+  }
+
+  &-inputs {
+    display: flex;
+  }
+
+  &-search {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 0.25rem;
+    width: 25%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.071);
+
+    &-input {
+      padding: 10px;
+      width: 90%;
+      border: none;
+    }
+
+    &-input:focus-visible {
+      outline: none;
+    }
+  }
+
+  &-dropdown-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &-dropdown {
+    position: relative;
+
+    &-button {
+      display: flex;
+      height: 55px;
+      width: 250px;
+      border-radius: 0.25rem;
+      align-items: center;
+      padding-left: 20px;
+      cursor: pointer;
+      border: none;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.071);
+
+      &-arrow {
+        height: 20px;
+        width: 15px;
+        padding-left: 50%;
+      }
+    }
+
+    &-menu {
+      display: none;
+      position: absolute;
+      z-index: 1;
+      top: 60px;
+      width: 250px;
+      border-radius: 0.25rem;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.071);
+
+      &-item {
+        display: flex;
+        width: 100%;
+        padding: 12px 16px;
+
+        &-label {
+          cursor: pointer;
+          width: 80%;
+        }
+
+        &:hover {
+          filter: contrast(50%);
+        }
+      }
+    }
+  }
+
+  &-countries {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 19vw);
+    grid-gap: 0rem;
+    justify-content: space-between;
+    padding-top: 40px;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 4rem;
+      height: 24rem;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.071);
+
+      &-header {
+        width: 100%;
+        height: 48%;
+
+        &-image {
+          width: 100%;
+          height: 100%;
+          border-radius: 5px 5px 0px 0px;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.071);
+          cursor: pointer;
+        }
+      }
+
+      &-description {
+        padding: 10px;
+        &-name {
+          font-weight: 600;
+        }
+
+        &-item {
+          padding-top: 5px;
+          font-weight: 600;
+
+          &-info {
+            font-weight: 100;
+            font-size: smaller;
+          }
+        }
+      }
+    }
+  }
+}
+
+.details-page {
+  flex: 1;
+  display: flex;
+  padding-top: 5rem;
+
+  &-margin-left {
+    width: 10%;
+    min-width: 0px;
+  }
+
+  &-margin-right {
+    width: 10%;
+    min-width: 0px;
+  }
+
+  &-container {
+    flex: 1;
+  }
+
+  &-back {
+    width: 100px;
+    height: 40px;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.071);
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+
+    &-icon {
+      height: 18px;
+      padding-right: 5px;
+    }
+  }
+
+  &-card {
+    padding-top: 5rem;
+    display: flex;
+    gap: 3rem;
+
+    &-display {
+      flex: 1;
+      &-image {
+        flex: 1;
+        height: 40vh;
+        max-height: 100%;
+        max-width: 100%;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.071);
+      }
+    }
+
+    &-description {
+      flex: 1;
+      padding-top: 20px;
+
+      &-main {
+        display: flex;
+        padding-bottom: 30px;
+        gap: 60px;
+
+        &-item {
+          padding-top: 5px;
+          font-weight: 600;
+
+          &-info {
+            font-weight: 100;
+            font-size: smaller;
+          }
+        }
+      }
+
+      &-footer {
+        font-weight: 600;
+        &-head {
+          padding-right: 10px;
+        }
+
+        &-button {
+          min-width: 100px;
+          height: 30px;
+          border-radius: 0.25rem;
+          cursor: pointer;
+          border: none;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.071);
+          margin-right: 5px;
+          margin-bottom: 5px;
+          font-weight: 100;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  text-align: center;
+  padding: 16px;
+}
+
+.show {
+  display: block;
+}
+
+.error-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  flex-direction: column;
+
+  &-button {
+    cursor: pointer;
+    border-radius: 0.25rem;
+  }
+}
+
+.loading-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+@media (max-width: 1100px) {
+  .card {
+    &-margin-left {
+      width: 3%;
+    }
+
+    &-margin-right {
+      width: 3%;
+    }
+
+    &-countries {
+      grid-template-columns: repeat(auto-fill, 22vw);
+      grid-gap: 0rem;
+    }
+  }
+
+  .details-page {
+    &-margin-left {
+      max-width: 5%;
+    }
+
+    &-margin-right {
+      max-width: 5%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .card {
+    &-inputs {
+      flex-direction: column;
+    }
+
+    &-search {
+      width: 100%;
+      box-sizing: border-box;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+
+    &-dropdown-container {
+      justify-content: flex-start;
+    }
+
+    &-countries {
+      display: flex;
+      flex-direction: column;
+
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
+  .details-page {
+    padding-top: 2rem;
+
+    &-margin-left {
+      max-width: 5%;
+    }
+
+    &-margin-right {
+      max-width: 5%;
+    }
+
+    &-card {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      padding-top: 2rem;
+
+      &-display {
+        &-image {
+          height: 30vh;
+        }
+      }
+
+      &-description {
+        &-main {
+          flex-direction: column;
+          gap: 30px;
+        }
+
+        &-footer {
+          padding-bottom: 10px;
+          &-head {
+            display: block;
+            padding-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin dark-mode {
+  background-color: $veryDarkBlue;
+
+  .nav {
+    background-color: $darkBlue;
+
+    &-start {
+      color: $colorWhite;
+    }
+
+    &-end {
+      color: $colorWhite;
+    }
+
+    .nav-button {
+      color: $colorWhite;
+    }
+  }
+
+  .card {
+    &-search {
+      background-color: $darkBlue;
+      color: $colorWhite;
+      &-input {
+        background-color: $darkBlue;
+        color: $colorWhite;
+      }
+
+      &-input::placeholder {
+        color: $colorWhite;
+        opacity: 1;
+      }
+    }
+
+    &-dropdown {
+      &-button {
+        background-color: $darkBlue;
+
+        color: $colorWhite;
+      }
+
+      &-menu {
+        background-color: $darkBlue;
+
+        &-item {
+          color: $colorWhite;
+        }
+      }
+    }
+
+    &-countries {
+      &-item {
+        color: $colorWhite;
+        background-color: $darkBlue;
+      }
+    }
+  }
+
+  .details-page {
+    &-back {
+      background-color: $darkBlue;
+      a {
+        color: $colorWhite;
+      }
+    }
+
+    &-card {
+      &-description {
+        color: $colorWhite;
+
+        &-footer {
+          &-button {
+            background-color: $darkBlue;
+            color: $colorWhite;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    background-color: $darkBlue;
+    color: $colorWhite;
+
+    a {
+      color: hsl(228, 45%, 44%);
+    }
+  }
+
+  .error-page {
+    color: $colorWhite;
+  }
+
+  .loading-page {
+    color: $colorWhite;
+  }
+}
+
+@mixin light-mode {
+  background-color: $colorWhite;
+
+  .nav {
+    background-color: $colorWhite;
+
+    &-start {
+      color: black;
+    }
+
+    &-end {
+      color: black;
+    }
+
+    .nav-button {
+      color: black;
+    }
+  }
+
+  .card {
+    background-color: $veryLightGray;
+
+    &-search {
+      background-color: $colorWhite;
+      color: black;
+      &-input {
+        background-color: $colorWhite;
+        color: black;
+      }
+
+      &-input::placeholder {
+        color: black;
+        opacity: 1;
+      }
+    }
+
+    &-dropdown {
+      &-button {
+        background-color: $colorWhite;
+
+        color: black;
+      }
+
+      &-menu {
+        background-color: $colorWhite;
+
+        &-item {
+          color: black;
+        }
+      }
+    }
+
+    &-countries {
+      &-item {
+        color: black;
+        background-color: $colorWhite;
+
+        &-description {
+          &-item {
+            &-info {
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .details-page {
+    background-color: $veryLightGray;
+
+    &-back {
+      background-color: $colorWhite;
+      a {
+        color: black;
+      }
+    }
+
+    &-card {
+      &-description {
+        color: black;
+
+        &-footer {
+          &-button {
+            background-color: $colorWhite;
+            color: black;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    background-color: $colorWhite;
+    color: black;
+  }
+}
+
+.dark-mode {
+  @include dark-mode;
+}
+
+.light-mode {
+  @include light-mode;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    @include dark-mode;
+  }
+}
