@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import { App, Home, ErrorPage, Country } from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/rest-countries",
     element: <App />,
