@@ -268,6 +268,7 @@ function Country() {
 
     async function fetchData() {
       try {
+        setIsLoading(true);
         let request = await axios.get(
           `https://restcountries.com/v3.1/alpha/${countryName}`
         );
