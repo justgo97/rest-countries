@@ -48,7 +48,11 @@ function App() {
             <h1>Where in the world?</h1>
           </div>
           <div className="nav-end">
-            <button onClick={onClickNavButton} className="nav-button">
+            <button
+              onClick={onClickNavButton}
+              className="nav-button"
+              aria-label="switch theme"
+            >
               {darkMode ? <IconSunHigh /> : <IconMoon />}
             </button>
           </div>
