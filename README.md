@@ -61,7 +61,7 @@ Mobile Details page - Light mode
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/rest-countries-api-with-color-theme-switcher-using-reactjs-vFQexHQbpR](https://www.frontendmentor.io/solutions/rest-countries-api-with-color-theme-switcher-using-reactjs-vFQexHQbpR)
 - Live Site URL: [https://justgo97.github.io/rest-countries/](https://justgo97.github.io/rest-countries/)
 
 ## My process
