@@ -74,10 +74,7 @@ function CountryCard(data: any) {
   let country = data.data;
   return (
     <div className="card-countries-item">
-      <Link
-        className="card-countries-item-header"
-        to={`/rest-countries/${country.cca3}`}
-      >
+      <Link className="card-countries-item-header" to={`/${country.cca3}`}>
         <img
           className="card-countries-item-header-image"
           src={country.flags.png}
@@ -340,7 +337,7 @@ function Country() {
       <div className="details-page-margin-left"></div>
       <div className="details-page-container">
         <button className="details-page-back">
-          <Link to={`/rest-countries/`}>
+          <Link to={`/`}>
             <IconArrowLeft className="details-page-back-icon" /> Back
           </Link>
         </button>
@@ -415,10 +412,7 @@ function Country() {
               </span>
               {borderCountries.length ? (
                 borderCountries.map((value, index) => (
-                  <Link
-                    key={index}
-                    to={`/rest-countries/${borderCodes[index]}`}
-                  >
+                  <Link key={index} to={`/${borderCodes[index]}`}>
                     <button
                       className="details-page-card-description-footer-button"
                       key={index}
@@ -450,7 +444,7 @@ function ErrorPage() {
         <p>
           <i>{error.statusText || error.message}</i>
         </p>
-        <Link to={`/rest-countries/`}>
+        <Link to={`/`}>
           <button className="error-page-button">Home page</button>
         </Link>
       </div>
