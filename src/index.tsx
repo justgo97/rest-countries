@@ -7,16 +7,16 @@ import reportWebVitals from "./reportWebVitals";
 
 const router = createHashRouter([
   {
-    path: "/rest-countries",
+    path: "/",
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "/rest-countries/",
+        path: "/",
         element: <Home />,
       },
       {
-        path: "/rest-countries/:countryName",
+        path: "/:countryName",
         element: <Country />,
       },
     ],
