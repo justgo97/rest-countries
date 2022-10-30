@@ -62,7 +62,7 @@ Mobile Details page - Light mode
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://justgo97.github.io/rest-countries/](https://justgo97.github.io/rest-countries/)
 
 ## My process
 
