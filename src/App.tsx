@@ -170,11 +170,16 @@ function Home() {
         return value.cca3 === "TUN";
       });
 
+      let italyData = (request.data as Array<any>).find((value) => {
+        return value.cca3 === "ITA";
+      });
+
       let newArr = (request.data as Array<any>).filter(
-        (value) => value.cca3 !== "TUN"
+        (value) => value.cca3 !== "TUN" && value.cca3 !== "ITA"
       );
 
       newArr.unshift(tunisiaData);
+      newArr.unshift(italyData);
 
       setDataObj(newArr);
       setIsLoading(false);
