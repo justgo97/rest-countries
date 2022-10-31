@@ -194,7 +194,7 @@ function Home() {
       <div className="card-margin-left"></div>
       <div className="card-container">
         <div className="card-inputs">
-          <div className="card-search">
+          <form className="card-search">
             <IconSearch />
             <input
               className="card-search-input"
@@ -203,7 +203,7 @@ function Home() {
               value={searchString}
               onChange={onChangeSearch}
             />
-          </div>
+          </form>
           <div className="card-dropdown-container">
             <div ref={dropdownContainerRef} className="card-dropdown">
               <button
@@ -340,7 +340,7 @@ function Country() {
   return (
     <div className="details-page">
       <div className="details-page-margin-left"></div>
-      <div className="details-page-container">
+      <section className="details-page-container">
         <button className="details-page-back">
           <Link to={`/`}>
             <IconArrowLeft className="details-page-back-icon" /> Back
@@ -432,7 +432,7 @@ function Country() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <div className="details-page-margin-right"></div>
     </div>
   );
