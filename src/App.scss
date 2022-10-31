@@ -155,13 +155,14 @@ main {
 
   &-countries {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 19vw);
-    grid-gap: 0rem;
+    grid-template-columns: repeat(auto-fill, 300px);
+    column-gap: 1vw;
     justify-content: space-between;
     padding-top: 40px;
 
     &-item {
       max-width: 300px;
+      min-width: 250px;
       display: flex;
       flex-direction: column;
       margin-bottom: 4rem;
@@ -333,16 +334,15 @@ main {
 @media (max-width: 1100px) {
   .card {
     &-margin-left {
-      width: 3%;
+      width: 1%;
     }
 
     &-margin-right {
-      width: 3%;
+      width: 1%;
     }
 
     &-countries {
-      grid-template-columns: repeat(auto-fill, 22vw);
-      grid-gap: 0rem;
+      justify-content: space-around;
     }
   }
 
