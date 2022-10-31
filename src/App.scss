@@ -208,7 +208,7 @@ main {
 .details-page {
   flex: 1;
   display: flex;
-  padding-top: 5rem;
+  padding-top: 5vh;
 
   &-margin-left {
     width: 10%;
@@ -348,6 +348,15 @@ main {
     &-margin-right {
       max-width: 5%;
     }
+
+    &-card {
+      &-display {
+        &-image {
+          height: 30vh;
+          width: 80%;
+        }
+      }
+    }
   }
 }
 
@@ -420,6 +429,19 @@ main {
             display: block;
             padding-bottom: 10px;
           }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .details-page {
+    &-card {
+      &-display {
+        &-image {
+          width: 100%;
+          height: auto;
         }
       }
     }
