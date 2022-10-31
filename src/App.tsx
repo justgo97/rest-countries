@@ -394,7 +394,7 @@ function Country() {
                 <div className="details-page-card-description-main-item">
                   Top Level Domain:{" "}
                   <span className="details-page-card-description-main-item-info">
-                    {country.tld[0]}
+                    {country.tld ? country.tld[0] : "None."}
                   </span>
                 </div>
                 <div className="details-page-card-description-main-item">
